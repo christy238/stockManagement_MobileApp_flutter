@@ -55,7 +55,7 @@ class LandingPage extends StatelessWidget {
         child: Image(
           image: AssetImage("assets/images/en-stock(1).png"),
           width: 100,
-          height: 200,
+          height: 180,
         ),
       ),
     );
@@ -67,15 +67,86 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: Text(widget.title),
+          backgroundColor: Colors.amber,
+          title: const Text(
+            "Menu",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+            ),
+          )),
+      drawer: Drawer(
+        backgroundColor: Color.fromARGB(242, 10, 8, 18),
+        child: ListView(
+          children: [
+            const DrawerHeader(
+              // decoration:
+              //     BoxDecoration(color: Color.fromARGB(255, 242, 239, 232)),
+              child: Text(
+                "Menu",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 134, 131, 131),
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: const Text(
+                "page1",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 123, 121, 121),
+                  fontSize: 18,
+                ),
+              ),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: const Text(
+                "page2",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 123, 121, 121),
+                  fontSize: 18,
+                ),
+              ),
+              onTap: () {},
+            ),
+            ListTile(
+              title: const Text(
+                "page2",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 123, 121, 121),
+                  fontSize: 18,
+                ),
+              ),
+              onTap: () {},
+            ),
+            ListTile(
+              title: const Text(
+                "page2",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 123, 121, 121),
+                  fontSize: 18,
+                ),
+              ),
+              onTap: () {},
+            ),
+            ListTile(
+              title: const Text(
+                "page2",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 123, 121, 121),
+                  fontSize: 18,
+                ),
+              ),
+              onTap: () {},
+            ),
+          ],
+        ),
       ),
-      body: const Center(),
-      // bottomNavigationBar: BottomNavigationBar(items: [
-      //   BottomNavigationBarItem(
-      //   icon:
-      //   label: ),
-      // ]),
+      body: Center(),
     );
   }
 }
