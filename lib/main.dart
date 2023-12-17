@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:store_app/loginPage.dart';
+import 'package:store_app/signupPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const LandingPage(),
         '/login': (context) => LoginPage(),
+        '/signup': (context) => signupPage(),
         '//': (context) => const MyHomePage(
               title: '',
             ),
@@ -50,16 +52,30 @@ class LandingPage extends StatelessWidget {
     // Perform navigation to MyHomePage when this widget is built
     Future.delayed(const Duration(seconds: 13), () {
       Navigator.pushReplacementNamed(
-          context, '/login'); // Replace with '/secondPage' if needed
+          context, '/signup'); // Replace with '/secondPage' if needed
     });
 
-    return const Scaffold(
-      backgroundColor: Colors.amber,
-      body: Center(
-        child: Image(
-          image: AssetImage("assets/images/en-stock(1).png"),
-          width: 100,
-          height: 100,
+    return  Scaffold(
+      backgroundColor: Color.fromARGB(255, 110, 251, 206),
+      body: Container(
+        
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                Color.fromARGB(255, 80, 255, 249),
+                Color.fromARGB(255, 0, 249, 141),
+              ],
+            ),
+          ),
+        child: const Center(
+          
+          child: Image(
+            image: AssetImage("assets/images/en-stock.png"),
+            width: 100,
+            height: 100,
+          ),
         ),
       ),
     );
@@ -98,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.amber,
+          backgroundColor: Color.fromARGB(255, 14, 14, 44),
           title: const Text(
             "Menu",
             style: TextStyle(
@@ -107,7 +123,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           )),
       drawer: Drawer(
-        backgroundColor: Colors.amberAccent,
+        backgroundColor: Color.fromARGB(255, 11, 238, 140),
         child: Container(
           decoration: const BoxDecoration(
             borderRadius: BorderRadius.only(
@@ -134,13 +150,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 ListTile(
                   leading: const FaIcon(
                     FontAwesomeIcons.home,
-                    color: Color.fromARGB(222, 249, 196, 35),
+                    color: Color.fromARGB(255, 11, 238, 140),
                   ),
                   // Icon(FluentIcons.),
                   title: const Text(
                     "Home",
                     style: TextStyle(
-                      color: Color.fromARGB(222, 249, 196, 35),
+                      color: Color.fromARGB(255, 11, 238, 140),
                       fontSize: 18,
                     ),
                   ),
