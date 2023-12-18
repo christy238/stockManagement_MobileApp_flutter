@@ -85,7 +85,7 @@ class LoginPage extends StatelessWidget {
                         Expanded(
                           child: ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, '/login');
+                              Navigator.pushNamed(context, '//');
                             },
                             style: ElevatedButton.styleFrom(
                               padding:
