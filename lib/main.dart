@@ -2,6 +2,7 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
+import 'package:store_app/dataTable.dart';
 import 'package:store_app/landing.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -53,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 243, 241, 254),
+      backgroundColor: const Color.fromARGB(255, 243, 241, 254),
       appBar: AppBar(
         toolbarHeight: 60,
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
@@ -105,7 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       drawer: Drawer(
-        backgroundColor: Color.fromARGB(255, 11, 238, 140),
+        backgroundColor: const Color.fromARGB(255, 11, 238, 140),
         child: Container(
           decoration: const BoxDecoration(
             borderRadius: BorderRadius.only(
@@ -131,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                 ListTile(
                   leading: const FaIcon(
-                    FontAwesomeIcons.home,
+                    FontAwesomeIcons.house,
                     color: Color.fromARGB(255, 11, 238, 140),
                   ),
                   // Icon(FluentIcons.),
@@ -288,7 +289,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                 height: 50,
                                 width: 50,
                                 decoration: BoxDecoration(
-                                    color: Color.fromARGB(88, 161, 204, 253),
+                                    color:
+                                        const Color.fromARGB(88, 161, 204, 253),
                                     borderRadius: BorderRadius.circular(50)),
                                 child: const Center(
                                   child: FaIcon(
@@ -465,7 +467,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: 10,
                   ),
                   Container(
-                    height: 360,
+                    height: 380,
                     decoration: BoxDecoration(
                         color: const Color.fromARGB(255, 255, 255, 255),
                         border: Border.all(
@@ -475,9 +477,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const SizedBox(
-                          height: 15,
-                        ),
                         Text(
                           'Purchases & sales overview',
                           style: TextStyle(
@@ -486,7 +485,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               color: fontcolr),
                         ),
                         const SizedBox(
-                          height: 10,
+                          height: 15,
                         ),
                         SfCartesianChart(
                             primaryXAxis: CategoryAxis(),
@@ -512,7 +511,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: 10,
                   ),
                   Container(
-                    height: 360,
+                    height: 350,
                     width: 360,
                     decoration: BoxDecoration(
                         color: const Color.fromARGB(255, 255, 255, 255),
@@ -534,8 +533,9 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                         const SizedBox(
-                          height: 15,
+                          height: 10,
                         ),
+                        MyTable(),
                       ],
                     ),
                   )
