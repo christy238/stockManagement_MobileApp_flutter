@@ -1,43 +1,7 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
-import 'package:fluentui_system_icons/fluentui_system_icons.dart';
-import 'package:store_app/landing.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:store_app/loginPage.dart';
-import 'package:store_app/signupPage.dart';
-
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const LandingPage(),
-        '/login': (context) => LoginPage(),
-        '/signup': (context) => signupPage(),
-        '//': (context) => MyHomePage(
-              title: '',
-            ),
-
-        // Add other routes if needed, like '/secondPage': (context) => SecondPage(),
-      },
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.deepPurple),
-        // useMaterial3: true, // This property might not be needed based on your Flutter version
-      ),
-      // home: const LandingPage(),
-    );
-  }
-}
+import 'package:store_app/chart.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -547,10 +511,4 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
-}
-
-class SalesData {
-  SalesData(this.year, this.sales);
-  final String year;
-  final double sales;
 }
