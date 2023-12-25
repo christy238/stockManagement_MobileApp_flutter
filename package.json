@@ -1,0 +1,26 @@
+{
+  "name": "store_app",
+  "version": "1.0.0",
+  "description": "A new Flutter project.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christy238/stock_management_app.git"
+  },
+  "author": "sabrine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christy238/stock_management_app/issues"
+  },
+  "homepage": "https://github.com/christy238/stock_management_app#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

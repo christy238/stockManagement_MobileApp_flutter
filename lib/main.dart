@@ -2,12 +2,12 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
-import 'package:store_app/dataTable.dart';
-import 'package:store_app/landing.dart';
+import 'package:store_app/presentation/widgets/dataTable.dart';
+import 'package:store_app/presentation/screens/landing.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:store_app/loginPage.dart';
-import 'package:store_app/signupPage.dart';
+import 'package:store_app/presentation/screens/loginPage.dart';
+import 'package:store_app/presentation/screens/signupPage.dart';
 
 void main() {
   runApp(MyApp());
